@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Chiharu design</title>
+        <!-- リセットcss -->
+        <link rel="stylesheet" href="./css/reset.css" />
+        <!-- web font -->
+        <script>
+            (function (d) {
+                var config = {
+                        kitId: "sbo6irq",
+                        scriptTimeout: 3000,
+                        async: true,
+                    },
+                    h = d.documentElement,
+                    t = setTimeout(function () {
+                        h.className =
+                            h.className.replace(/\bwf-loading\b/g, "") +
+                            " wf-inactive";
+                    }, config.scriptTimeout),
+                    tk = d.createElement("script"),
+                    f = false,
+                    s = d.getElementsByTagName("script")[0],
+                    a;
+                h.className += " wf-loading";
+                tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+                tk.async = true;
+                tk.onload = tk.onreadystatechange = function () {
+                    a = this.readyState;
+                    if (f || (a && a != "complete" && a != "loaded")) return;
+                    f = true;
+                    clearTimeout(t);
+                    try {
+                        Typekit.load(config);
+                    } catch (e) {}
+                };
+                s.parentNode.insertBefore(tk, s);
+            })(document);
+        </script>
+        <!-- slick -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+        />
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header id="header">
+            <div class="header__inner">
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <img src="./images/logo.svg" alt="Chiharu design"
+                    /></a>
+                </h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li>
+                            <a href="./about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="./works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li class="contact__nav">
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-visual">
+                <img src="./images/top.png" />
+
+                <h2 class="catch">
+                    <img
+                        src="images/catch.svg"
+                        alt="Have Fun!心おどるデザインを"
+                    />
+                </h2>
+                <div class="ballon">
+                    <img src="./images/balloon.png" alt="風船" />
+                </div>
+                <div class="rabbit">
+                    <img src="./images/rabbit.png" alt="着ぐるみうさぎさん" />
+                </div>
+                <div class="cloud">
+                    <img src="./images/top-cloud.png" alt="ピンクの雲" />
+                </div>
+            </div>
+        </header>
+        <!-- リード文 -->
+        <section class="lead">
+            <div class="lead-left">
+                <img src="./images/leftside1.png" />
+                <img src="./images/leftside2.png" class="leftside2" />
+            </div>
+            <div class="lead-sentence">
+                <p>
+                    いつだって、どんな時も、何歳だって、楽しく！！<br />
+                    見る人の心のギアがちょっと上がる、ワクワクが湧いてくる、<br />
+                    そんなデザインを届けたい。
+                </p>
+                <p>
+                    初めて遊園地に足を踏み入れたときのような高揚感をデザインで表現する、<br />
+                    それが「Chiharu design」のモットーです。
+                </p>
+                <p>
+                    お客様の気持ちを明るくし、好奇心をくすぐる。<br />
+                    「もっと見たい」「もっと知りたい」<br />
+                    そんな気持ちになるようなデザインを目指しています。
+                </p>
+            </div>
+            <div class="lead-right">
+                <img src="./images/rightside1.png" />
+                <img src="./images/rightside2.png" class="rightside2" />
+            </div>
+        </section>
+        <!-- scrooll -->
+        <div class="scroll-wrap">
+            <img src="./images/scroll.svg" alt="scroll" class="scroll-text" />
+            <img
+                src="./images/scroll-allow.svg"
+                alt="下へスクロール"
+                class="scroll-arrow"
+            />
+        </div>
+        <!-- about me -->
+        <section class="about-me">
+            <div class="coaster">
+                <img
+                    src="./images/coaster.png"
+                    alt="ジェットコースターのイラスト"
+                />
+            </div>
+
+            <div class="about-me__inner">
+                <div class="about-me__inner__inner">
+                    <img
+                        src="./images/star-pink.png"
+                        alt="ピンクのキラキラ"
+                        class="star-pink"
+                    />
+                    <img
+                        src="./images/star-green.png"
+                        alt="グリーンのキラキラ"
+                        class="star-green"
+                    />
+                    <img
+                        src="./images/star-yellow.png"
+                        alt="黄色のキラキラ"
+                        class="star-yellow"
+                    />
+                    <div class="me-photo">
+                        <img src="./images/me@2x.png" alt="わたしの写真" />
+                    </div>
+                    <div class="me-text">
+                        <h2>
+                            <img
+                                src="./images/aboutme@2x.png"
+                                alt="about me わたしについて"
+                            />
+                        </h2>
+
+                        <p>
+                            二人の男の子ママ。<br />
+                            とにかく楽しいことが大好きで、多趣味。<br />
+                            好奇心が旺盛なので、「やってみたい」と思ったことは<span
+                                >すぐやってみる、</span
+                            >
+                            <span> フットワークの軽さが自慢です。</span>
+                        </p>
+                        <p>
+                            特にエンターテイメントが大好き。<br />
+                            デザインを通じて、自分も「表現」をしていきたい。
+                        </p>
+                        <p>
+                            わたしのデザインで、みなさんの日常がちょっと明るくなったら嬉しいです。
+                        </p>
+                    </div>
+                </div>
+                <img
+                    src="images/balloon-2set.png"
+                    alt="緑とピンクの風船"
+                    class="balloon-2set"
+                />
+                <img
+                    src="./images/balloon-pink.png"
+                    alt="ピンクの風船"
+                    class="balloon-pink"
+                />
+                <div class="btn_more">
+                    <a href="./about.html"><p>もっと見る</p></a>
+                </div>
+            </div>
+        </section>
+        <!-- works -->
+        <div class="background">
+            <section class="works">
+                <div class="works__top">
+                    <img
+                        src="./images/balloon.png"
+                        alt="風船"
+                        class="works_balloon"
+                    />
+                    <img
+                        src="./images/roof.png"
+                        alt="屋根"
+                        class="works_roof"
+                    />
+                    <img
+                        src="./images/bear.png"
+                        alt="くまさんの乗り物"
+                        class="works_bear"
+                    />
+                </div>
+                <h2 class="works__title">
+                    <img
+                        src="./images/works@2x.png"
+                        alt="Works お仕事いちらん"
+                    />
+                </h2>
+                <ul class="works__wrap">
+                    <li class="rotate3">
+                        <img src="./images/works-nest.png" alt="nest" />
+                    </li>
+                    <li class="rotate357">
+                        <img
+                            src="./images/works-nishida.png"
+                            alt="西田司法書士事務所"
+                        />
+                    </li>
+                    <li class="rotate3">
+                        <img src="./images/works-life.jpg" alt="美容院 LIFE" />
+                    </li>
+                    <li class="rotate357">
+                        <img
+                            src="./images/works-dezasuta_cafe.jpg"
+                            alt="Design cafe"
+                        />
+                    </li>
+                    <li class="rotate3">
+                        <img
+                            src="./images/works-ice.jpg"
+                            alt="HAPPY HOLIDAY ICECREAM"
+                        />
+                    </li>
+
+                    <li class="rotate357">
+                        <img
+                            src="./images/works-buger-rich.jpg"
+                            alt="デラックスバーガー 高級感"
+                        />
+                    </li>
+                    <li class="rotate3">
+                        <img
+                            src="./images/works-buger-pop.jpg"
+                            alt="デラックスバーガー POP"
+                        />
+                    </li>
+                    <li class="rotate357">
+                        <img src="./images/works-incl.jpg" alt="inclチラシ" />
+                    </li>
+                    <li class="rotate3">
+                        <img
+                            src="./images/works-incl-ivent.jpg"
+                            alt="inclイベント用チラシ"
+                        />
+                    </li>
+                    <li class="rotate357">
+                        <img
+                            src="./images/works-Nest-logo.jpg"
+                            alt="nestロゴ"
+                        />
+                    </li>
+                </ul>
+                <div class="btn_wrap">
+                    <div class="arrow_box"></div>
+                    <div class="btn_more2">
+                        <a href="./works.html">もっと見る</a>
+                    </div>
+                </div>
+            </section>
+            <!-- skills -->
+
+            <section id="skills">
+                <h2 class="skills__title">
+                    <img src="./images/skills@2x.png" />
+                </h2>
+                <div class="skills__inner">
+                    <div class="skills__inner__wrap">
+                        <img
+                            src="images/design.png"
+                            alt="デザイン"
+                            class="skills_img"
+                        />
+                        <img
+                            src="./images/tool_1@2x.png"
+                            alt="tool"
+                            class="skills_tool"
+                        />
+                        <p>
+                            webサイト、LP、バナー等の制作を始めとし、名刺、チラシ、三つ折りパンフ等紙ベースの制作など幅広く対応が可能です。<br />
+                            ご要望に基づいて丁寧に制作いたします。
+                        </p>
+                        <br />
+
+                        <p>ツール　Illustrator/Photoshop/Canva</p>
+                    </div>
+                    <div class="skills__inner__wrap">
+                        <img
+                            src="images/code.png"
+                            alt="コーディング"
+                            class="skills_img"
+                        />
+                        <img
+                            src="./images/tool_2@2x.png"
+                            alt="tool"
+                            class="skills_tool"
+                        />
+                        <p>
+                            デザインカンプを基に、HTML/CSSを使用し、レスポンシブ対応のサイト制作が可能です。<br />
+                            また、WordPressを使用したサイト制作にも対応いたします。
+                        </p>
+                        <br />
+
+                        <p>ツール　HTML/CSS/jQuery/WordPress</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contact -->
+            <section>
+                <div class="contact-box">
+                    <h2>
+                        <img src="./images/contact@2x.png" alt="contact" />
+                    </h2>
+                    <p>
+                        当サイトをご覧いただきありがとうございます。<br />
+                        ご依頼、ご相談、ご質問等は、こちらから承っております。<br />
+                        お気軽にお問い合わせください。
+                    </p>
+
+                    <div class="btn-contact">
+                        <a href="./contact.html"> お問い合わせはこちら</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer -->
+            <section class="footer">
+                <div class="footer__inner">
+                    <div class="footer__inner__wrap">
+                        <h2>
+                            <img src="./images/logo.svg" alt="Chiharu design" />
+                        </h2>
+                        <nav class="footer__nav">
+                            <ul>
+                                <li><a href="./about.html">About Me</a></li>
+                                <li><a href="./works.html">Works</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <img src="./images/wheel.png" alt="観覧車" class="wheel" />
+                </div>
+                <div class="footer__coppy">
+                    <p>&copy;Chiharu design All rights reserved.</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- slick -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(function () {
+                $(".hamburger").click(function () {
+                    $(".hamburger").toggleClass("open");
+                    $(".header_nav-sp").fadeToggle();
+                });
+                //galleryスライダー
+                $(".works__wrap").slick({
+                    arrows: true,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    dots: false,
+                    infinite: true,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    adaptiveHeight: true,
+                    centerMode: true,
+                    centerPadding: "10%",
+                    appendArrows: $(".arrow_box"),
+                    prevArrow: '<div class="slide-arrow prev-arrow"></div>',
+                    nextArrow: '<div class="slide-arrow next-arrow"></div>',
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 1,
+                            },
+                        },
+                    ],
+                });
+            });
+        </script>
+    </body>
+</html>

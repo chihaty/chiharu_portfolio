@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #231816;
+    font-family: zen-maru-gothic, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
