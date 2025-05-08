@@ -28,23 +28,59 @@
     padding-left: 80px;
     box-sizing: border-box;
 }
-.header__nav li {
+.header__nav li a {
+    position: relative;
     line-height: 38px;
     font-size: 25px;
     font-family: chill-script, sans-serif;
     font-style: normal;
     font-weight: 400;
     white-space: nowrap;
+    color: transparent;
+    -webkit-text-stroke: 1px #231816;
+    background: linear-gradient(to right, #c7a4f4 50%, #ff6d99 50%) 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 200% 100%;
+    transition: background-position 0.3s;
 }
-.contact__nav {
-    background-color: #ff6d99;
+.header__nav li a:hover {
+    background-position: 0 100%;
+}
+.contact__nav a {
+    display: block;
+    text-align: center;
+    position: relative;
+    margin-right: 64px;
     width: 140px;
     height: 38px;
+    color: #fff !important;
+    transition: 0.3s ease-in-out;
+    background: #ff6d99 !important;
     border-radius: 19px;
-    line-height: 38px;
-    text-align: center;
-    margin-right: 64px;
+    overflow: hidden;
 }
+.contact__nav a:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient(
+        130deg,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 55%
+    );
+    -webkit-transition: 0.5s;
+    transition: 0.6s;
+}
+.contact__nav a:hover:before {
+    left: 100%;
+}
+
 .logo {
     width: 15.7%;
 }
@@ -113,6 +149,9 @@
     line-height: 1.625;
     text-align: center;
     margin-bottom: 26px;
+}
+.lead-sentence span {
+    display: inline-block;
 }
 .lead-right {
     width: 27.5%;
@@ -517,6 +556,9 @@
     white-space: nowrap;
     color: #ff6d99;
 }
+.footer__nav ul li:hover {
+    transform: translateY(-3px);
+}
 .wheel {
     width: 27.9%;
     position: absolute;
@@ -534,7 +576,45 @@
     line-height: 40px;
 }
 
-/* 子ページ */
-.body__back {
-    background-image: url(../images/back-graycheck.jpg);
+/* topへ戻る */
+.toTop {
+    position: fixed;
+    bottom: 394px;
+    right: 66px;
+    width: 100px;
 }
+
+/* 子ページ */
+
+/* about me 子ページ */
+.about-me-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.about-me-top img {
+    width: 40%;
+}
+.about-me-top h2 {
+    line-height: 38px;
+    font-size: 40px;
+    font-family: chill-script, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: #ff6d99;
+    white-space: nowrap;
+    -webkit-text-stroke: 1px #231816;
+    width: 20%;
+}
+.about-me-top p {
+    font-size: 24px;
+    font-family: ab-kirigirisu, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ff6d99;
+    white-space: nowrap;
+}
+
+/* ヘッダーのグロナビ部分、About Meだけ両端の色が欠けてしまい、
+原因がわかりません。
+フォントを変えると直るので、フォントの問題でしょうか・・ */
