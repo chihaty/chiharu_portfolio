@@ -283,33 +283,37 @@ html {
     left: 9.58%;
     bottom: -28px;
 }
-.btn_more a {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: #ff6d99;
-    border: 1px dashed #fff;
-    position: absolute;
-    bottom: -70px;
-    right: 8.58%;
+/* ボタン基本コード */
+.btn a {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #ff6d99;
+    border: 1px dashed #fff;
     box-shadow: 0px 0px 0px 5px #ff6d99, 0px 0px 0px 6px #231816;
-    transition: 0.3s ease-in-out;
-}
-.btn_more a p {
     color: #fff;
     font-size: 20px;
     font-family: ab-kirigirisu, sans-serif;
     font-weight: 400;
     font-style: normal;
+    transition: 0.3s ease-in-out;
 }
-
-.btn_more a:hover {
+.btn a:hover {
     background: #c7a4f4;
     box-shadow: 0px 0px 0px 5px #c7a4f4, 0px 0px 0px 6px #231816;
+    transform: translateY(5px);
 }
+
+/* もっと見るボタン */
+.btn_more a {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -70px;
+    right: 8.58%;
+}
+
 /* works */
 .works {
     background-image: url(..//images/back-purple.png);
@@ -406,40 +410,28 @@ html {
     margin: auto;
     transform: rotate(45deg);
 }
-/* もっと見る */
+/* もっと見るボタン２ */
 .btn_more2 a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 37px;
     width: 176px;
     height: 74px;
-    background: #ff6d99;
-    border: 1px dashed #fff;
-    box-shadow: 0px 0px 0px 5px #ff6d99, 0px 0px 0px 6px #231816;
-    color: #fff;
-    font-size: 20px;
-    font-family: ab-kirigirisu, sans-serif;
-    font-weight: 400;
-    font-style: normal;
     margin-left: 80px;
+    border-radius: 37px;
 }
-.btn_more2 a:after {
+
+.btn_wrap {
+    display: flex;
+    justify-content: center;
+    padding: 32px 0 80px;
+}
+
+/* 次への三角ボタン */
+.preview a:after {
     content: "";
     width: 18px;
     height: 10px;
     background-image: url(..//images/triangle.png);
     background-repeat: no-repeat;
     background-position: right;
-}
-.btn_more2 a:hover {
-    background: #c7a4f4;
-    box-shadow: 0px 0px 0px 5px #c7a4f4, 0px 0px 0px 6px #231816;
-}
-.btn_wrap {
-    display: flex;
-    justify-content: center;
-    padding: 32px 0 80px;
 }
 
 /* グレーの格子柄背景 */
@@ -506,33 +498,13 @@ html {
     text-align: center;
 }
 
+/* お問い合わせはこちらボタン */
 .btn-contact a {
-    background: #ff6d99;
     margin: 48px auto;
     width: 310px;
     height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 35px;
-    border: dashed 1px #fff;
-    box-shadow: 0px 0px 0px 5px #ff6d99, 0px 0px 0px 6px #231816;
-    color: #fff;
-    font-size: 20px;
-    line-height: 70px;
-    font-family: ab-kirigirisu, sans-serif;
-    font-weight: 400;
-    font-style: normal;
     padding-right: 8px;
-}
-
-.btn-contact a:after {
-    content: "";
-    width: 18px;
-    height: 10px;
-    background-image: url(..//images/triangle.png);
-    background-repeat: no-repeat;
-    background-position: right;
 }
 
 .btn-contact a:hover {
@@ -982,6 +954,9 @@ html {
 
 .works__items li a {
     position: relative;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
 }
 .works__items img {
     border: 1px solid #231816;
@@ -1268,19 +1243,209 @@ html {
     margin-top: 16px;
 }
 .thanks {
-    margin: 64px auto 200px;
+    margin: 32px auto 64px;
     text-align: center;
 }
 .thanks p {
     line-height: 3;
 }
 
-/* 山本ゆかりさんへの返信にご紹介があったサイトを参照に 
-googleフォームを使ってコンタクトフォームを作成したのですが、
-フォーム送信内容が届かず、色々試してみたのですがどこが間違っているのか
-わかりません・・・。
-すみません、アドバイスお願いします。
+/* homeへ戻るボタン */
+.btn_home {
+    margin: 0 auto;
+}
+.btn_home a {
+    border-radius: 37px;
+    width: 176px;
+    height: 74px;
+    margin: 0px auto 120px;
+}
 
-googleフォームのリンク↓
-https://docs.google.com/forms/d/e/1FAIpQLSeUWERKeZntYR0LqGx0B2zAAgqey3J1M2e50pPTzc7ViHwLxA/viewform?usp=header
-*/
+.btn_back a:before {
+    content: "";
+    width: 18px;
+    height: 10px;
+    background-image: url(..//images/triangle-back.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+/* works孫ページ */
+.flag__position {
+    background-image: url(..//images/flag.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.mock-up {
+    width: 53.8%;
+    margin: 80px auto 0;
+}
+
+.btn_ToWebsite a {
+    width: 194px;
+    height: 44px;
+    border-radius: 22px;
+    margin: 24px 0 32px auto;
+}
+
+/* Works詳細紹介 */
+.works__detail {
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.semicircle {
+    display: block;
+    margin: 64px auto 0;
+    max-width: 1000px;
+}
+.pink-box {
+    background: #ffc6de;
+    border-left: 1px solid #231816;
+    border-right: 1px solid #231816;
+    border-bottom: 1px solid #231816;
+    max-width: 1000px;
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+
+.pink-box h3 {
+    font-size: 28px;
+    text-align: center;
+    padding: 42px 0 32px;
+}
+
+.pink-box h3 span {
+    font-size: 16px;
+}
+
+.pink-box img {
+    width: 85%;
+    display: block;
+    margin: 0 auto;
+}
+
+.detail {
+    display: flex;
+    max-width: 800px;
+    padding: 0 20px;
+    margin: 32px auto 16px;
+}
+.detail dl {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.detail dl dt {
+    width: 35%;
+    border-bottom: 1px dashed #fff;
+    padding: 8px 16px 8px 8px;
+    text-align-last: justify;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+.detail dl dd {
+    width: 65%;
+    border-bottom: 1px dashed #fff;
+    padding: 8px 0px 8px 16px;
+    box-sizing: border-box;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.detail dl dt:last-of-type {
+    border: none;
+}
+.detail dl dd:last-child {
+    border: none;
+}
+
+.detail_right_box {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.detail_right_box {
+    padding-left: 40px;
+}
+.detail_right_box p {
+    line-height: 1.625;
+}
+.detail_right_box ul,
+.point-list {
+    list-style-type: disc;
+    margin-left: 30px;
+}
+.detail_right_box ul li,
+.point-list li {
+    line-height: 1.625;
+}
+
+.point {
+    max-width: 800px;
+    margin: 32px auto 0;
+    padding: 0 20px;
+    display: flex;
+}
+.star-set {
+    width: 38px;
+    padding-right: 8px;
+}
+
+.point h3 {
+    font-size: 20px;
+    padding: 0;
+    line-height: 38px;
+}
+
+.point-list {
+    max-width: 800px;
+    padding: 32px 20px 56px 50px;
+    margin: 0px auto;
+}
+
+.btn_backToWokrs a {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 56px auto 136px;
+}
+
+.full-img {
+    width: 55.5%;
+    margin: 80px auto;
+}
+
+.full-img-cafe {
+    max-width: 1000px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cafe_pc {
+    width: 73%;
+}
+
+.cafe_sp {
+    width: 18%;
+}
+
+/* ice,burger等 */
+
+.sample-img {
+    width: 31.25%;
+    margin: 80px auto 64px;
+}
+
+.sample-img_wide {
+    width: 53.1%;
+    margin: 80px auto 64px;
+}
+
+.banner {
+    width: 38%;
+    margin: 40px auto 0;
+}

@@ -1,0 +1,178 @@
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Works | Chiharu design</title>
+        <meta name="author" content="Chiharu design" />
+        <meta
+            name="discription"
+            content="Have fun!心おどるデザインを。見る人の心のギアがちょっと上がる、そんなデザインを届けたい。Chiharu desinのご紹介"
+        />
+        <!-- リセットcss -->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <!-- web font -->
+        <script>
+            (function (d) {
+                var config = {
+                        kitId: "sbo6irq",
+                        scriptTimeout: 3000,
+                        async: true,
+                    },
+                    h = d.documentElement,
+                    t = setTimeout(function () {
+                        h.className =
+                            h.className.replace(/\bwf-loading\b/g, "") +
+                            " wf-inactive";
+                    }, config.scriptTimeout),
+                    tk = d.createElement("script"),
+                    f = false,
+                    s = d.getElementsByTagName("script")[0],
+                    a;
+                h.className += " wf-loading";
+                tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+                tk.async = true;
+                tk.onload = tk.onreadystatechange = function () {
+                    a = this.readyState;
+                    if (f || (a && a != "complete" && a != "loaded")) return;
+                    f = true;
+                    clearTimeout(t);
+                    try {
+                        Typekit.load(config);
+                    } catch (e) {}
+                };
+                s.parentNode.insertBefore(tk, s);
+            })(document);
+        </script>
+
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body class="background">
+        <header id="header">
+            <div class="header__inner">
+                <h1 class="logo">
+                    <a href="../index.html">
+                        <img src="../images/logo.svg" alt="Chiharu design"
+                    /></a>
+                </h1>
+                <nav class="header__nav">
+                    <ul>
+                        <li class="about__nav">
+                            <a href="../about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="../works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#skills">Skills</a>
+                        </li>
+                        <li class="contact__nav">
+                            <a href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="flag__position works__title__wrap">
+            <h2>Works</h2>
+            <p>おしごと</p>
+        </div>
+        <!-- モックアップ画像 -->
+        <section>
+            <div class="sample-img">
+                <img
+                    src="../images/works7-burger-rich.jpg"
+                    alt="デラックスバーガー"
+                />
+            </div>
+        </section>
+
+        <!-- 詳細紹介 -->
+
+        <section class="works__detail">
+            <img
+                src="../images/back-semicircle.png"
+                alt="半円のもこもこ"
+                class="semicircle"
+            />
+
+            <div class="pink-box">
+                <h3>デラックスバーガー(架空)</h3>
+                <img src="../images/line.png" />
+
+                <div class="detail">
+                    <dl>
+                        <dt>カテゴリー</dt>
+                        <dd>バナー（高級感ver.）</dd>
+                        <dt>担当範囲</dt>
+                        <dd>デザイン</dd>
+                        <dt>制作期間</dt>
+                        <dd>1週間</dd>
+
+                        <dt>ツール</dt>
+                        <dd>Illustrator / Photoshop</dd>
+                    </dl>
+                    <div class="detail_right_box">
+                        <ul>
+                            <li>新商品をSNSにて告知するのためのバナー</li>
+                            <li>
+                                消費者の反応を見るため、「高級ver」「POPver」の２案を作成。
+                            </li>
+                            <li>主なターゲットは３０代男性と仮定し制作した</li>
+                        </ul>
+                    </div>
+                </div>
+                <img src="../images/line.png" />
+                <div class="point">
+                    <div class="star-set">
+                        <img src="../images/star-set.png" alt="星のイラスト" />
+                    </div>
+                    <h3>制作のポイント</h3>
+                </div>
+                <ul class="point-list">
+                    <li>黒と金（やまぶき色）を使うことで、高級感を演出</li>
+
+                    <li>ハンバーガーを中央に配置し、存在感を出した</li>
+                    <li>
+                        「激旨」を丸で囲むことで強調し美味しさをアピールした
+                    </li>
+                    <li>
+                        ハンバーガーの背景に赤を少し入れることで、出来立ての熱々のジューシーさが感じられ、よりハンバーガーに目線が行き美味しそうに見える
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 一覧に戻るボタン -->
+            <div class="btn btn_back btn_backToWokrs">
+                <a href="../works.html">一覧に戻る</a>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <section class="footer">
+            <div class="footer__inner">
+                <div class="footer__inner__wrap">
+                    <h2>
+                        <img src="../images/logo.svg" alt="Chiharu design" />
+                    </h2>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li><a href="../about.html">About Me</a></li>
+                            <li><a href="../works.html">Works</a></li>
+                            <li><a href="../index.html#skills">Skills</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <img src="../images/wheel.png" alt="観覧車" class="wheel" />
+            </div>
+            <div class="footer__coppy">
+                <p>&copy;Chiharu design All rights reserved.</p>
+            </div>
+        </section>
+        <p class="toTop">
+            <a href="#header">
+                <img src="../images/totop@2x.png" alt="topに戻る" />
+            </a>
+        </p>
+    </body>
+</html>
