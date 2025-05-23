@@ -55,6 +55,7 @@
                         <img src="./images/logo.svg" alt="Chiharu design"
                     /></a>
                 </h1>
+                <!-- グローバルナビゲーション -->
                 <nav class="header__nav">
                     <ul>
                         <li class="about__nav">
@@ -67,6 +68,26 @@
                             <a href="./index.html#skills">Skills</a>
                         </li>
                         <li class="contact__nav">
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger"><span></span></div>
+
+                <nav class="header__nav-sp">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="about__nav">
+                            <a href="./about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="./works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#skills">Skills</a>
+                        </li>
+                        <li>
                             <a href="./contact.html">Contact</a>
                         </li>
                     </ul>
@@ -85,7 +106,12 @@
             <!-- 自己紹介 -->
             <section class="introduction">
                 <div class="family-photo">
-                    <img src="./images/family-photo.jpg" />
+                    <picture
+                        ><source
+                            srcset="./images/family-photo-sp@2x.jpg"
+                            media="(max-width:767px)" />
+                        <img src="./images/family-photo@2x.jpg" alt="家族写真"
+                    /></picture>
                 </div>
                 <div class="introduction-txt">
                     <h2>Chiharu Nishida <span>西田　千春</span></h2>
@@ -118,63 +144,82 @@
             </section>
             <!-- 履歴 -->
             <section class="history">
-                <img src="./images/start.png" alt="start" class="start" />
+                <picture>
+                    <source
+                        srcset="./images/start-sp@2x.png"
+                        media="(max-width:767px)"
+                    />
+                    <img src="./images/start.png" alt="start" class="start" />
+                </picture>
                 <img src="./images/car@2x.png" alt="かっこいい車" class="car" />
-                <img src="./images/boon@2x.png" alt="BOON" class="boon1" />
-                <img src="./images/boon@2x.png" alt="BOON" class="boon2" />
+                <img
+                    src="./images/boon@2x.png"
+                    alt="BOON"
+                    class="boon1 fuwafuwa01"
+                />
+                <img
+                    src="./images/boon@2x.png"
+                    alt="BOON"
+                    class="boon2 fuwafuwa02"
+                />
 
                 <img
-                    src="./images/star-pink.png"
+                    src="./images/star-pink@2x.png"
                     alt="ピンクの星"
-                    class="road-star-pink"
+                    class="road-star-pink swing3"
                 />
                 <img
-                    src="./images/star-green.png"
+                    src="./images/star-green@2x.png"
                     alt="グリーンの星"
-                    class="road-star-green"
+                    class="road-star-green swing2"
                 />
                 <img
-                    src="./images/firework_purple.png"
+                    src="./images/firework_purple@2x.png"
                     alt="パープルの花火"
-                    class="firework_purple"
+                    class="firework_purple blinking2"
                 />
                 <img
-                    src="./images/firework_pink_59.png"
+                    src="./images/firework_pink_59@2x.png"
                     alt="ピンクの花火"
-                    class="firework_pink_59"
+                    class="firework_pink_59 blinking2"
                 />
                 <img
-                    src="./images/firework_mini.png"
+                    src="./images/firework_mini@2x.png"
                     alt="小さい花火"
-                    class="firework_mini"
+                    class="firework_mini blinking"
                 />
                 <img
-                    src="./images/firework_pink_72.png"
+                    src="./images/firework_pink_72.@2x.png"
                     alt="ピンクの花火"
-                    class="firework_pink_72"
+                    class="firework_pink_72 blinking"
                 />
                 <img
-                    src="./images/worning@2x.png"
-                    alt="worning"
-                    class="worning"
+                    src="./images/warning@2x.png"
+                    alt="warning"
+                    class="warning zoom"
                 />
                 <img
                     src="./images/fireworks@2x.png"
                     alt="ロケット花火"
-                    class="fireworks"
+                    class="fireworks swing"
                 />
                 <img
                     src="./images/signboard@2x.png"
                     alt="看板"
-                    class="signboard"
+                    class="signboard flip"
                 />
                 <img
                     src="./images/newstage@2x.png"
                     alt="goal new stage"
-                    class="goal"
+                    class="goal extend"
                 />
-                <div class="road">
-                    <img src="./images/road.png" alt="道路" />
+                <div class="road-wrap">
+                    <picture
+                        ><source
+                            srcset="./images/road-sp@2x.png"
+                            media="(max-width:767px)" />
+                        <img src="./images/road.png" alt="道路" class="road"
+                    /></picture>
                 </div>
                 <div class="speechBubble-wrap">
                     <div class="speechBubble space-10">
@@ -190,7 +235,7 @@
                         <p>
                             読書や映画が大好き！THE文化系。<br />
                             JUDY AND MARYにハマる。<br />
-                            高校で入った演劇部で表現する楽しさを覚え、<br />
+                            高校で入った演劇部で表現する楽しさを覚え、
                             短大では自ら演劇部を立ち上げて活動する。
                         </p>
                     </div>
@@ -284,5 +329,16 @@
                 <img src="./images/totop@2x.png" alt="topに戻る" />
             </a>
         </p>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- ハンバーガーメニュー -->
+        <script>
+            $(function () {
+                $(".hamburger").click(function () {
+                    $(".hamburger").toggleClass("open");
+                    $(".header__nav-sp").fadeToggle();
+                });
+            });
+        </script>
     </body>
 </html>

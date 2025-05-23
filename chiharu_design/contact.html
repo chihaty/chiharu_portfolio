@@ -55,6 +55,7 @@
                         <img src="./images/logo-white.svg" alt="Chiharu design"
                     /></a>
                 </h1>
+                <!-- グローバルナビゲーション -->
                 <nav class="header__nav">
                     <ul>
                         <li class="about__nav">
@@ -71,29 +72,31 @@
                         </li>
                     </ul>
                 </nav>
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger-green"><span></span></div>
+                <nav class="header__nav-sp">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="about__nav">
+                            <a href="./about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="./works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="./index.html#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
-
         <main>
             <!-- top部分 -->
             <div class="contact__top">
-                <div class="contact_top_leftside">
-                    <img
-                        src="./images/contact_top_left1.png"
-                        alt="浮かぶ模様"
-                        class="contact_top_left1 fuwafuwa01"
-                    />
-                    <img
-                        src="./images/contact_top_left2.png"
-                        alt="浮かぶ模様"
-                        class="contact_top_left2 fuwafuwa02"
-                    />
-                    <img
-                        src="./images/contact_top_left3.png"
-                        alt="浮かぶ模様"
-                        class="contact_top_left3 fuwafuwa03"
-                    />
-                </div>
+                <!-- タイトル -->
                 <div class="contact__title">
                     <h2>Contact</h2>
                     <p class="contact__subtitle">おといあわせ</p>
@@ -105,25 +108,59 @@
                         >
                     </p>
                 </div>
-                <div class="contact_top_rightside">
+                <!-- 左サイド -->
+                <picture>
+                    <source
+                        srcset="./images/contact_top_left1-sp@2x.png"
+                        media="(max-width:767px)" />
+
+                    <img
+                        src="./images/contact_top_left1.png"
+                        alt="浮かぶ模様"
+                        class="contact_top_left1 fuwafuwa01"
+                /></picture>
+                <picture>
+                    <source
+                        srcset="./images/contact_top_left2-sp@2x.png"
+                        media="(max-width:767px)" />
+
+                    <img
+                        src="./images/contact_top_left2.png"
+                        alt="浮かぶ模様"
+                        class="contact_top_left2 fuwafuwa02"
+                /></picture>
+                <img
+                    src="./images/contact_top_left3.png"
+                    alt="浮かぶ模様"
+                    class="contact_top_left3 fuwafuwa03"
+                />
+                <!-- 右サイド -->
+
+                <picture>
+                    <source
+                        srcset="./images/contact_top_right1-sp@2x.png"
+                        media="(max-width:767px)" />
+
                     <img
                         src="./images/contact_top_right1.png"
                         alt="浮かぶ模様"
                         class="contact_top_right1 fuwafuwa01"
-                    />
+                /></picture>
+                <picture>
+                    <source
+                        srcset="./images/contact_top_right2-sp@2x.png"
+                        media="(max-width:767px)" />
                     <img
                         src="./images/contact_top_right2.png"
                         alt="浮かぶ模様"
                         class="contact_top_right2 fuwafuwa02"
-                    />
-                    <img
-                        src="./images/contact_top_rigth3.png"
-                        alt="浮かぶ模様"
-                        class="contact_top_right3 fuwafuwa03"
-                    />
-                </div>
+                /></picture>
+                <img
+                    src="./images/contact_top_rigth3.png"
+                    alt="浮かぶ模様"
+                    class="contact_top_right3 fuwafuwa03"
+                />
             </div>
-
             <!-- お問い合わせフォーム -->
             <form
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeUWERKeZntYR0LqGx0B2zAAgqey3J1M2e50pPTzc7ViHwLxA/formResponse"
@@ -180,6 +217,7 @@
                         name="entry.237475818"
                     ></textarea>
                 </div>
+
                 <!-- 送信ボタン -->
                 <div class="c-form__submit">
                     <button type="submit">送信</button>
@@ -195,6 +233,7 @@
                 onload="if(submitted){window.location='./thanks.html';}"
             ></iframe>
         </main>
+
         <!-- footer -->
         <section class="footer">
             <div class="footer__inner">
@@ -221,5 +260,16 @@
                 <img src="./images/totop@2x.png" alt="topに戻る" />
             </a>
         </p>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- ハンバーガーメニュー -->
+        <script>
+            $(function () {
+                $(".hamburger-green").click(function () {
+                    $(".hamburger-green").toggleClass("open");
+                    $(".header__nav-sp").fadeToggle();
+                });
+            });
+        </script>
     </body>
 </html>

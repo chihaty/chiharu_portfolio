@@ -67,6 +67,7 @@
                         <img src="./images/logo.svg" alt="Chiharu design"
                     /></a>
                 </h1>
+                <!-- グローバルナビゲーション -->
                 <nav class="header__nav">
                     <ul>
                         <li class="about__nav">
@@ -76,16 +77,44 @@
                             <a href="./works.html">Works</a>
                         </li>
                         <li>
-                            <a href="#skills">Skills</a>
+                            <a href="./index.html#skills">Skills</a>
                         </li>
                         <li class="contact__nav">
                             <a href="./contact.html">Contact</a>
                         </li>
                     </ul>
                 </nav>
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger"><span></span></div>
+
+                <nav class="header__nav-sp">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li class="about__nav">
+                            <a href="./about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="./works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="#skills">Skills</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+
+            <!-- メインビジュアル -->
             <div class="main-visual">
-                <img src="./images/top.png" />
+                <picture>
+                    <source
+                        srcset="./images/top-sp@2x.png"
+                        media="(max-width:767px)"
+                        alt="ピンクの空と遊園地" />
+                    <img src="./images/top.png" alt="ピンクの空と遊園地"
+                /></picture>
 
                 <h2 class="catch">
                     <img
@@ -93,11 +122,25 @@
                         alt="Have Fun!心おどるデザインを"
                     />
                 </h2>
-                <div class="ballon">
-                    <img src="./images/balloon.png" alt="風船" />
+                <div class="ballon fuwa4-wrapper">
+                    <img
+                        src="./images/balloon.png"
+                        alt="風船"
+                        class="fuwafuwa04"
+                    />
                 </div>
-                <div class="rabbit">
-                    <img src="./images/rabbit.png" alt="着ぐるみうさぎさん" />
+                <div class="rabbit swing">
+                    <picture
+                        ><source
+                            srcset="./images/rabbit-sp@2x.png"
+                            media="(max-width:767px)"
+                        />
+
+                        <img
+                            src="./images/rabbit.png"
+                            alt="着ぐるみうさぎさん"
+                        />
+                    </picture>
                 </div>
                 <div class="cloud">
                     <img src="./images/top-cloud.png" alt="ピンクの雲" />
@@ -106,10 +149,23 @@
         </header>
         <!-- リード文 -->
         <section class="lead">
-            <div class="lead-left">
-                <img src="./images/leftside1.png" />
-                <img src="./images/leftside2.png" class="leftside2" />
-            </div>
+            <picture>
+                <source
+                    srcset="./images/leftside1-sp@2x.png"
+                    media="(max-width:767px)"
+                />
+                <img
+                    src="./images/leftside1.png"
+                    class="leftside1 fuwafuwa01"
+                />
+            </picture>
+            <picture>
+                <source
+                    srcset="./images/leftside2-sp@2x.png"
+                    media="(max-width:767px)" />
+                <img src="./images/leftside2.png" class="leftside2 fuwafuwa02"
+            /></picture>
+
             <div class="lead-sentence">
                 <p>
                     いつだって、どんな時も、<span>何歳だって、楽しく！！</span
@@ -134,12 +190,28 @@
                     >
                 </p>
             </div>
-            <div class="lead-right">
-                <img src="./images/rightside1.png" />
-                <img src="./images/rightside2.png" class="rightside2" />
-            </div>
+            <picture
+                ><source
+                    srcset="./images/rightside1-sp@2x.png"
+                    media="(max-width:767px)"
+                />
+                <img
+                    src="./images/rightside1.png"
+                    class="rightside1 fuwafuwa01"
+                />
+            </picture>
+            <picture
+                ><source
+                    srcset="./images/rightside2-sp@2x.png"
+                    media="(max-width:767px)"
+                />
+                <img
+                    src="./images/rightside2.png"
+                    class="rightside2 fuwafuwa02"
+                />
+            </picture>
         </section>
-        <!-- scrooll -->
+        <!-- scroll -->
         <div class="scroll-wrap">
             <img src="./images/scroll.svg" alt="scroll" class="scroll-text" />
             <img
@@ -151,10 +223,14 @@
         <!-- about me -->
         <section class="about-me">
             <div class="coaster">
-                <img
-                    src="./images/coaster.png"
-                    alt="ジェットコースターのイラスト"
-                />
+                <picture>
+                    <source
+                        srcset="./images/coaster-sp@2x.png"
+                        media="(max-width:767px)" />
+                    <img
+                        src="./images/coaster.png"
+                        alt="ジェットコースターのイラスト"
+                /></picture>
             </div>
             <div class="about-me-position">
                 <img
@@ -202,7 +278,7 @@
                     </div>
                 </div>
                 <img
-                    src="images/balloon-2set.png"
+                    src="images/balloon-2set@2x.png"
                     alt="緑とピンクの風船"
                     class="balloon-2set"
                 />
@@ -327,7 +403,7 @@
                 <div class="skills__inner">
                     <div class="skills__inner__wrap">
                         <img
-                            src="images/design.png"
+                            src="images/design@2x.png"
                             alt="デザイン"
                             class="skills_img"
                         />
@@ -346,7 +422,7 @@
                     </div>
                     <div class="skills__inner__wrap">
                         <img
-                            src="images/code.png"
+                            src="images/code@2x.png"
                             alt="コーディング"
                             class="skills_img"
                         />
@@ -373,8 +449,11 @@
                         <img src="./images/contact@2x.png" alt="contact" />
                     </h2>
                     <p>
-                        当サイトをご覧いただきありがとうございます。<br />
-                        ご依頼、ご相談、ご質問等は、こちらから承っております。<br />
+                        当サイトをご覧いただき<span>ありがとうございます。</span
+                        ><br />
+                        ご依頼、ご相談、ご質問等は、<span
+                            >こちらから承っております。</span
+                        ><br />
                         お気軽にお問い合わせください。
                     </p>
 
@@ -419,13 +498,13 @@
             $(function () {
                 $(".hamburger").click(function () {
                     $(".hamburger").toggleClass("open");
-                    $(".header_nav-sp").fadeToggle();
+                    $(".header__nav-sp").fadeToggle();
                 });
                 //galleryスライダー
                 $(".works__wrap").slick({
                     arrows: true,
                     autoplay: true,
-                    autoplaySpeed: 2000,
+                    autoplaySpeed: 1500,
                     dots: false,
                     infinite: true,
                     slidesToShow: 3,
@@ -441,6 +520,7 @@
                             breakpoint: 767,
                             settings: {
                                 slidesToShow: 1,
+                                centerPadding: "25%",
                             },
                         },
                     ],

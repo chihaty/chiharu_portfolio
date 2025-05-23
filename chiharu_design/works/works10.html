@@ -55,6 +55,7 @@
                         <img src="../images/logo.svg" alt="Chiharu design"
                     /></a>
                 </h1>
+                <!-- グローバルナビゲーション -->
                 <nav class="header__nav">
                     <ul>
                         <li class="about__nav">
@@ -67,6 +68,26 @@
                             <a href="../index.html#skills">Skills</a>
                         </li>
                         <li class="contact__nav">
+                            <a href="../contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger"><span></span></div>
+
+                <nav class="header__nav-sp">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="about__nav">
+                            <a href="../about.html">About me</a>
+                        </li>
+                        <li>
+                            <a href="../works.html">Works</a>
+                        </li>
+                        <li>
+                            <a href="../index.html#skills">Skills</a>
+                        </li>
+                        <li>
                             <a href="../contact.html">Contact</a>
                         </li>
                     </ul>
@@ -96,11 +117,21 @@
         <!-- 詳細紹介 -->
 
         <section class="works__detail">
-            <img
-                src="../images/back-semicircle.png"
-                alt="半円のもこもこ"
-                class="semicircle"
-            />
+            <picture>
+                <source
+                    srcset="../images/back-semicircle.png"
+                    media="(min-width:767px)" />
+                <source
+                    srcset="../images/back-semicircle-sp@2x.png"
+                    media="(min-width:451px)" />
+                <source
+                    srcset="../images/back-semicircle-sp2@2x.png"
+                    media="(max-width:450px)" />
+                <img
+                    src="../images/back-semicircle.png"
+                    alt="半円のもこもこ"
+                    class="semicircle"
+            /></picture>
 
             <div class="pink-box">
                 <h3>共生マガジンINCL 様　公開記念イベント</h3>
@@ -186,5 +217,16 @@
                 <img src="../images/totop@2x.png" alt="topに戻る" />
             </a>
         </p>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- ハンバーガーメニュー -->
+        <script>
+            $(function () {
+                $(".hamburger").click(function () {
+                    $(".hamburger").toggleClass("open");
+                    $(".header__nav-sp").fadeToggle();
+                });
+            });
+        </script>
     </body>
 </html>

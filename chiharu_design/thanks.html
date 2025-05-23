@@ -47,85 +47,130 @@
         <!-- stylesheet -->
         <link rel="stylesheet" href="./css/style.css" />
     </head>
-    <body class="background">
-        <header id="header">
-            <div class="header__inner__contact">
-                <h1 class="logo">
-                    <a href="./index.html">
-                        <img src="./images/logo-white.svg" alt="Chiharu design"
-                    /></a>
-                </h1>
-                <nav class="header__nav">
-                    <ul>
-                        <li class="about__nav">
-                            <a href="./about.html">About me</a>
-                        </li>
-                        <li>
-                            <a href="./works.html">Works</a>
-                        </li>
-                        <li>
-                            <a href="./index.html#skills">Skills</a>
-                        </li>
-                        <li class="contact__nav">
-                            <a href="./contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        <!-- top部分 -->
-        <div class="contact__top">
-            <div class="contact_top_leftside">
-                <img
-                    src="./images/contact_top_left1.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_left1 fuwafuwa01"
-                />
-                <img
-                    src="./images/contact_top_left2.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_left2 fuwafuwa02"
-                />
-                <img
-                    src="./images/contact_top_left3.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_left3 fuwafuwa03"
-                />
-            </div>
-            <div class="contact__title">
-                <h2>Thank you</h2>
-                <p class="thanks__subtitle">ありがとうございます</p>
-            </div>
-            <div class="contact_top_rightside">
-                <img
-                    src="./images/contact_top_right1.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_right1 fuwafuwa01"
-                />
-                <img
-                    src="./images/contact_top_right2.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_right2 fuwafuwa02"
-                />
-                <img
-                    src="./images/contact_top_rigth3.png"
-                    alt="浮かぶ模様"
-                    class="contact_top_right3 fuwafuwa03"
-                />
-            </div>
-        </div>
-        <div class="thanks">
-            <p>
-                この度はChiharu designへお問いせいただき<br />
-                誠にありがとうございます。<br />
-                お問い合わせ内容を確認の上、3営業日以内にお返事いたします。
-            </p>
-        </div>
-        <!-- homeへ戻るボタン -->
-        <div class="btn btn_home btn_back">
-            <a href="./index.html">ホームへ戻る</a>
-        </div>
+    <body class="background footer__position">
+        <div class="contnt__wrap">
+            <header id="header">
+                <div class="header__inner__contact">
+                    <h1 class="logo">
+                        <a href="./index.html">
+                            <img
+                                src="./images/logo-white.svg"
+                                alt="Chiharu design"
+                        /></a>
+                    </h1>
+                    <!-- グローバルナビゲーション -->
+                    <nav class="header__nav">
+                        <ul>
+                            <li class="about__nav">
+                                <a href="./about.html">About me</a>
+                            </li>
+                            <li>
+                                <a href="./works.html">Works</a>
+                            </li>
+                            <li>
+                                <a href="./index.html#skills">Skills</a>
+                            </li>
+                            <li class="contact__nav">
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- ハンバーガーメニュー -->
+                    <div class="hamburger-green"><span></span></div>
+                    <nav class="header__nav-sp">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li class="about__nav">
+                                <a href="./about.html">About me</a>
+                            </li>
+                            <li>
+                                <a href="./works.html">Works</a>
+                            </li>
+                            <li>
+                                <a href="./index.html#skills">Skills</a>
+                            </li>
+                            <li>
+                                <a href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <main>
+                <!-- top部分 -->
+                <div class="contact__top">
+                    <div class="contact__title">
+                        <h2>Thank you</h2>
+                        <p class="thanks__subtitle">ありがとうございます</p>
+                    </div>
+                    <!-- 左サイド -->
+                    <picture>
+                        <source
+                            srcset="./images/contact_top_left1-sp@2x.png"
+                            media="(max-width:767px)" />
 
+                        <img
+                            src="./images/contact_top_left1.png"
+                            alt="浮かぶ模様"
+                            class="contact_top_left1 fuwafuwa01"
+                    /></picture>
+                    <picture>
+                        <source
+                            srcset="./images/contact_top_left2-sp@2x.png"
+                            media="(max-width:767px)" />
+
+                        <img
+                            src="./images/contact_top_left2.png"
+                            alt="浮かぶ模様"
+                            class="contact_top_left2 fuwafuwa02"
+                    /></picture>
+                    <img
+                        src="./images/contact_top_left3.png"
+                        alt="浮かぶ模様"
+                        class="contact_top_left3 fuwafuwa03"
+                    />
+                    <!-- 右サイド -->
+
+                    <picture>
+                        <source
+                            srcset="./images/contact_top_right1-sp@2x.png"
+                            media="(max-width:767px)" />
+
+                        <img
+                            src="./images/contact_top_right1.png"
+                            alt="浮かぶ模様"
+                            class="contact_top_right1 fuwafuwa01"
+                    /></picture>
+                    <picture>
+                        <source
+                            srcset="./images/contact_top_right2-sp@2x.png"
+                            media="(max-width:767px)" />
+                        <img
+                            src="./images/contact_top_right2.png"
+                            alt="浮かぶ模様"
+                            class="contact_top_right2 fuwafuwa02"
+                    /></picture>
+                    <img
+                        src="./images/contact_top_rigth3.png"
+                        alt="浮かぶ模様"
+                        class="contact_top_right3 fuwafuwa03"
+                    />
+                </div>
+                <div class="thanks">
+                    <p>
+                        この度はChiharu designへお問いせいただき<br />
+                        誠にありがとうございます。<br />
+                        お問い合わせ内容を確認の上、<span
+                            >3営業日以内にお返事いたします。</span
+                        >
+                    </p>
+                </div>
+                <!-- homeへ戻るボタン -->
+                <div class="btn btn_home btn_back">
+                    <a href="./index.html">ホームへ戻る</a>
+                </div>
+            </main>
+        </div>
         <!-- footer -->
         <section class="footer">
             <div class="footer__inner">
@@ -137,7 +182,9 @@
                         <ul>
                             <li><a href="./about.html">About Me</a></li>
                             <li><a href="./works.html">Works</a></li>
-                            <li><a href="./index.html#skills">Skills</a></li>
+                            <li>
+                                <a href="./index.html#skills">Skills</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -147,11 +194,22 @@
                 <p>&copy;Chiharu design All rights reserved.</p>
             </div>
         </section>
+
         <p class="toTop">
             <a href="#header">
                 <img src="./images/totop@2x.png" alt="topに戻る" />
             </a>
         </p>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- ハンバーガーメニュー -->
+        <script>
+            $(function () {
+                $(".hamburger-green").click(function () {
+                    $(".hamburger-green").toggleClass("open");
+                    $(".header__nav-sp").fadeToggle();
+                });
+            });
+        </script>
     </body>
-    
 </html>
