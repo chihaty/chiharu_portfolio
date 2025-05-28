@@ -93,7 +93,7 @@
                 </nav>
             </div>
         </header>
-        <div class="flag__position works__title__wrap">
+        <div class="works__title__wrap">
             <h2>Works</h2>
             <p>おしごと</p>
         </div>
@@ -107,69 +107,74 @@
         <!-- 詳細紹介 -->
 
         <section class="works__detail">
-            <picture>
-                <source
-                    srcset="../images/back-semicircle.png"
-                    media="(min-width:767px)" />
-                <source
-                    srcset="../images/back-semicircle-sp@2x.png"
-                    media="(min-width:451px)" />
-                <source
-                    srcset="../images/back-semicircle-sp2@2x.png"
-                    media="(max-width:450px)" />
-                <img
-                    src="../images/back-semicircle.png"
-                    alt="半円のもこもこ"
-                    class="semicircle"
-            /></picture>
+            <div class="works__detail__inner">
+                <picture>
+                    <source
+                        srcset="../images/back-semicircle.png"
+                        media="(min-width:767px)" />
+                    <source
+                        srcset="../images/back-semicircle-sp@2x.png"
+                        media="(min-width:451px)" />
+                    <source
+                        srcset="../images/back-semicircle-sp2@2x.png"
+                        media="(max-width:450px)" />
+                    <img
+                        src="../images/back-semicircle.png"
+                        alt="半円のもこもこ"
+                        class="semicircle"
+                /></picture>
 
-            <div class="pink-box">
-                <h3>DESIGN CAFE(架空)</h3>
-                <img src="../images/line.png" />
+                <div class="pink-box">
+                    <h3>DESIGN CAFE(架空)</h3>
+                    <img src="../images/line.png" />
 
-                <div class="detail">
-                    <dl>
-                        <dt>カテゴリー</dt>
-                        <dd>Webサイト（LP）</dd>
-                        <dt>担当範囲</dt>
-                        <dd>コーディング</dd>
-                        <dt>制作期間</dt>
-                        <dd>２週間</dd>
+                    <div class="detail">
+                        <dl>
+                            <dt>カテゴリー</dt>
+                            <dd>Webサイト（LP）</dd>
+                            <dt>担当範囲</dt>
+                            <dd>コーディング</dd>
+                            <dt>制作期間</dt>
+                            <dd>２週間</dd>
 
-                        <dt>ツール</dt>
-                        <dd>
-                            html/css/jQuery/<span> JavaScript/VSCode/</span
-                            ><span>GitHub</span>
-                        </dd>
-                    </dl>
-                    <div class="detail_right_box">
-                        <p>
-                            カフェサイトのLPを作成。<br />
-                            デザインカンプを基にコーディングを行った。<br />
-                            レスポンシブ対応により、SP版も再現。JavaScriptやjQueryを使用し、動きのあるサイトになっている。
-                        </p>
+                            <dt>ツール</dt>
+                            <dd>
+                                html/css/jQuery/<span> JavaScript/VSCode/</span
+                                ><span>GitHub</span>
+                            </dd>
+                        </dl>
+                        <div class="detail_right_box">
+                            <p>
+                                カフェサイトのLPを作成。<br />
+                                デザインカンプを基にコーディングを行った。<br />
+                                レスポンシブ対応により、SP版も再現。JavaScriptやjQueryを使用し、動きのあるサイトになっている。
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <img src="../images/line.png" />
-                <div class="point">
-                    <div class="star-set">
-                        <img src="../images/star-set.png" alt="星のイラスト" />
+                    <img src="../images/line.png" />
+                    <div class="point">
+                        <div class="star-set">
+                            <img
+                                src="../images/star-set.png"
+                                alt="星のイラスト"
+                            />
+                        </div>
+                        <h3>制作のポイント</h3>
                     </div>
-                    <h3>制作のポイント</h3>
-                </div>
-                <ul class="point-list">
-                    <li>
-                        PC版だけでなく、SP版もデザインカンプを基に忠実に再現
-                    </li>
+                    <ul class="point-list">
+                        <li>
+                            PC版だけでなく、SP版もデザインカンプを基に忠実に再現
+                        </li>
 
-                    <li>ファーストビューにはスライドショーを実装</li>
-                    <li>
-                        ギャラリー部分では写真をクリックするとモーダルウィンドウが表示され、大きいサイズで写真を確認できるようになっている
-                    </li>
-                    <li>
-                        スクロールした際にTOPへワンクリックで戻るためのボタンを実装
-                    </li>
-                </ul>
+                        <li>ファーストビューにはスライドショーを実装</li>
+                        <li>
+                            ギャラリー部分では写真をクリックするとモーダルウィンドウが表示され、大きいサイズで写真を確認できるようになっている
+                        </li>
+                        <li>
+                            スクロールした際にTOPへワンクリックで戻るためのボタンを実装
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- 制作物フル掲載 -->
             <div class="full-img-cafe">
@@ -221,6 +226,8 @@
         </p>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- scroll -->
+        <script src="https://unpkg.com/scrollreveal"></script>
         <!-- ハンバーガーメニュー -->
         <script>
             $(function () {
@@ -228,6 +235,29 @@
                     $(".hamburger").toggleClass("open");
                     $(".header__nav-sp").fadeToggle();
                 });
+            });
+            //scroll
+            ScrollReveal().reveal(".works__title__wrap", {
+                duration: 1600,
+                origin: "top",
+                distance: "50px",
+                scale: 0.5,
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".mock-up", {
+                duration: 1600,
+                delay: 1000,
+                origin: "bottom",
+                distance: "50px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".works__detail__inner,.full-img-cafe", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "50px",
+                reset: false,
             });
         </script>
     </body>

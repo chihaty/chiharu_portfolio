@@ -44,6 +44,8 @@
                 s.parentNode.insertBefore(tk, s);
             })(document);
         </script>
+        <!--shake-->
+        <link rel="stylesheet" type="text/css" href="./css/csshake.css" />
         <!-- stylesheet -->
         <link rel="stylesheet" href="./css/style.css" />
     </head>
@@ -94,12 +96,20 @@
                 </nav>
             </div>
             <div class="about-me-top">
-                <img src="./images/cloud-left.png" alt="ピンクの雲" />
+                <img
+                    src="./images/cloud-left.png"
+                    alt="ピンクの雲"
+                    class="cloud-left"
+                />
                 <div class="about-me_title">
                     <h2>About Me</h2>
                     <p>わたしについて</p>
                 </div>
-                <img src="./images/cloud-right.png" alt="ピンクの雲" />
+                <img
+                    src="./images/cloud-right.png"
+                    alt="ピンクの雲"
+                    class="cloud-right"
+                />
             </div>
         </header>
         <main>
@@ -109,7 +119,7 @@
                     <picture
                         ><source
                             srcset="./images/family-photo-sp@2x.jpg"
-                            media="(max-width:767px)" />
+                            media="(max-width:883px)" />
                         <img src="./images/family-photo@2x.jpg" alt="家族写真"
                     /></picture>
                 </div>
@@ -331,6 +341,8 @@
         </p>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- scroll -->
+        <script src="https://unpkg.com/scrollreveal"></script>
         <!-- ハンバーガーメニュー -->
         <script>
             $(function () {
@@ -338,6 +350,69 @@
                     $(".hamburger").toggleClass("open");
                     $(".header__nav-sp").fadeToggle();
                 });
+            });
+
+            //スクロール
+            ScrollReveal().reveal(".about-me_title", {
+                duration: 1600,
+                origin: "bottom",
+                distance: "50px",
+                scale: 0.5,
+                reset: true,
+            });
+            ScrollReveal().reveal(".cloud-left", {
+                duration: 1600,
+                delay: 400,
+                origin: "left",
+                distance: "300px",
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".cloud-right", {
+                duration: 1600,
+                delay: 400,
+                origin: "right",
+                distance: "300px",
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".introduction", {
+                duration: 1600,
+                delay: 900,
+                origin: "bottom",
+                distance: "300px",
+                reset: false,
+            });
+
+            ScrollReveal().reveal(".speechBubble", {
+                duration: 1600,
+                delay: 200,
+                origin: "right",
+                distance: "300px",
+                reset: false,
+            });
+
+            ScrollReveal().reveal(".bear", {
+                duration: 1600,
+                delay: 500,
+                origin: "right",
+                distance: "300px",
+                reset: false,
+                mobile: true,
+                afterReveal: function (el) {
+                    el.classList.add("walking");
+                },
+            });
+            ScrollReveal().reveal(".panda", {
+                duration: 1600,
+                delay: 500,
+                origin: "right",
+                distance: "300px",
+                reset: false,
+                mobile: true,
+                afterReveal: function (el) {
+                    el.classList.add("walking2");
+                },
             });
         </script>
     </body>

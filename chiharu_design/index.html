@@ -55,11 +55,69 @@
             type="text/css"
             href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
         />
-
+        <!--shake-->
+        <link rel="stylesheet" type="text/css" href="./css/csshake.css" />
         <!-- stylesheet -->
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
+        <!-- ローディング画面 -->
+        <div class="loading">
+            <div class="load-bear shake-slow shake-constant">
+                <img src="./images/bear.png" alt="くまちゃん" />
+            </div>
+            <p>loading...</p>
+        </div>
+        <div class="heart"></div>
+
+        <!-- 左右流れる文字 -->
+        <div class="loop-wrap-left">
+            <img
+                src="./images/loop-logo-left.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-left.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-left.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-left.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+        </div>
+
+        <div class="loop-wrap-right">
+            <img
+                src="./images/loop-logo-right.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-right.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-right.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+            <img
+                src="./images/loop-logo-right.svg"
+                alt="Chiharu design"
+                class="loop-img"
+            />
+        </div>
+
+        <!-- ヘッダー -->
         <header id="header">
             <div class="header__inner">
                 <h1 class="logo">
@@ -122,14 +180,14 @@
                         alt="Have Fun!心おどるデザインを"
                     />
                 </h2>
-                <div class="ballon fuwa4-wrapper">
+                <div class="ballon">
                     <img
                         src="./images/balloon.png"
                         alt="風船"
                         class="fuwafuwa04"
                     />
                 </div>
-                <div class="rabbit swing">
+                <div class="rabbit">
                     <picture
                         ><source
                             srcset="./images/rabbit-sp@2x.png"
@@ -142,13 +200,14 @@
                         />
                     </picture>
                 </div>
-                <div class="cloud">
-                    <img src="./images/top-cloud.png" alt="ピンクの雲" />
-                </div>
             </div>
         </header>
+
         <!-- リード文 -->
         <section class="lead">
+            <div class="cloud">
+                <img src="./images/top-cloud.png" alt="ピンクの雲" />
+            </div>
             <picture>
                 <source
                     srcset="./images/leftside1-sp@2x.png"
@@ -213,7 +272,11 @@
         </section>
         <!-- scroll -->
         <div class="scroll-wrap">
-            <img src="./images/scroll.svg" alt="scroll" class="scroll-text" />
+            <img
+                src="./images/scroll.svg"
+                alt="scroll"
+                class="scroll-text rolling"
+            />
             <img
                 src="./images/scroll-allow.svg"
                 alt="下へスクロール"
@@ -236,56 +299,57 @@
                 <img
                     src="./images/star-pink@2x.png"
                     alt="ピンクのキラキラ"
-                    class="star-pink"
+                    class="star-pink twinkle"
                 />
                 <img
                     src="./images/star-green@2x.png"
                     alt="グリーンのキラキラ"
-                    class="star-green"
+                    class="star-green twinkle2"
                 />
                 <img
                     src="./images/star-yellow.png"
                     alt="黄色のキラキラ"
-                    class="star-yellow"
+                    class="star-yellow twinkle3"
                 />
                 <div class="about-me__inner">
                     <div class="me-photo">
                         <img src="./images/me@2x.png" alt="わたしの写真" />
                     </div>
-                    <div class="me-text">
-                        <h2>
+                    <div class="me-text-box">
+                        <h2 class="me-text_title">
                             <img
                                 src="./images/aboutme@2x.png"
                                 alt="about me わたしについて"
                             />
                         </h2>
-
-                        <p>
-                            二人の男の子ママ。<br />
-                            とにかく楽しいことが大好きで、多趣味。<br />
-                            好奇心が旺盛なので、「やってみたい」と思ったことは<span
-                                >すぐやってみる、</span
-                            >
-                            <span> フットワークの軽さが自慢です。</span>
-                        </p>
-                        <p>
-                            特にエンターテイメントが大好き。<br />
-                            デザインを通じて、自分も「表現」をしていきたい。
-                        </p>
-                        <p>
-                            わたしのデザインで、みなさんの日常がちょっと明るくなったら嬉しいです。
-                        </p>
+                        <div class="me-text">
+                            <p>
+                                二人の男の子ママ。<br />
+                                とにかく楽しいことが大好きで、多趣味。<br />
+                                好奇心が旺盛なので、「やってみたい」と思ったことは<span
+                                    >すぐやってみる、</span
+                                >
+                                <span> フットワークの軽さが自慢です。</span>
+                            </p>
+                            <p>
+                                特にエンターテイメントが大好き。<br />
+                                デザインを通じて、自分も「表現」をしていきたい。
+                            </p>
+                            <p>
+                                わたしのデザインで、みなさんの日常がちょっと明るくなったら嬉しいです。
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <img
                     src="images/balloon-2set@2x.png"
                     alt="緑とピンクの風船"
-                    class="balloon-2set"
+                    class="balloon-2set fuwafuwa01"
                 />
                 <img
                     src="./images/balloon-pink.png"
                     alt="ピンクの風船"
-                    class="balloon-pink"
+                    class="balloon-pink fuwafuwa02"
                 />
                 <div class="btn btn_more">
                     <a href="./about.html">もっと見る</a>
@@ -299,7 +363,7 @@
                     <img
                         src="./images/balloon.png"
                         alt="風船"
-                        class="works_balloon"
+                        class="works_balloon fuwafuwa01"
                     />
                     <img
                         src="./images/roof.png"
@@ -309,7 +373,7 @@
                     <img
                         src="./images/bear.png"
                         alt="くまさんの乗り物"
-                        class="works_bear"
+                        class="works_bear walking"
                     />
                 </div>
                 <h2 class="works__title">
@@ -485,21 +549,27 @@
                 </div>
             </section>
         </div>
+
         <p class="toTop">
             <a href="#header">
                 <img src="./images/totop@2x.png" alt="topに戻る" />
             </a>
         </p>
 
-        <!-- slick -->
+        <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- slick -->
         <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <!-- scroll -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
         <script>
             $(function () {
                 $(".hamburger").click(function () {
                     $(".hamburger").toggleClass("open");
                     $(".header__nav-sp").fadeToggle();
                 });
+
                 //galleryスライダー
                 $(".works__wrap").slick({
                     arrows: true,
@@ -517,6 +587,13 @@
                     nextArrow: '<div class="slide-arrow next-arrow"></div>',
                     responsive: [
                         {
+                            breakpoint: 1000,
+                            settings: {
+                                slidesToShow: 2,
+                                centerPadding: "13%",
+                            },
+                        },
+                        {
                             breakpoint: 767,
                             settings: {
                                 slidesToShow: 1,
@@ -525,6 +602,123 @@
                         },
                     ],
                 });
+            });
+            //scroll
+            ScrollReveal().reveal(".catch", {
+                duration: 1600, // アニメーション完了にかかる時間
+                origin: "bottom", //下から上に
+                distance: "300px", // 300px移動
+                scale: 0.5, // 50%から拡大
+                reset: false, // 繰り返し
+                delay: 3000,
+            });
+            ScrollReveal().reveal(".rabbit", {
+                duration: 1600, // アニメーション完了にかかる時間
+                delay: 3700, // ディレイ
+                origin: "bottom", //下から上に
+                distance: "300px", // 300px移動
+                reset: false, // 繰り返し
+                afterReveal: function (el) {
+                    el.classList.add("swing");
+                },
+            });
+            ScrollReveal().reveal(".ballon", {
+                duration: 1600,
+                delay: 4000,
+                origin: "bottom",
+                distance: "300px",
+                reset: false,
+                afterReveal: function (el) {
+                    el.classList.add("fuwa4-wrapper");
+                },
+            });
+            ScrollReveal().reveal(".lead", {
+                duration: 1600,
+                delay: 600,
+                origin: "bottom",
+                distance: "300px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".me-photo", {
+                duration: 1600,
+                delay: 200,
+                origin: "left",
+                distance: "300px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".me-text_title", {
+                duration: 1600,
+                delay: 200,
+                origin: "right",
+                distance: "300px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".me-text", {
+                duration: 1600,
+                delay: 200,
+                origin: "right",
+                distance: "300px",
+                reset: false,
+            });
+
+            ScrollReveal().reveal(".works__top", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "300px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".works__title", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "300px",
+                reset: false,
+            });
+
+            ScrollReveal().reveal(".skills__title", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "100px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".skills__inner", {
+                duration: 1600,
+                delay: 600,
+                origin: "bottom",
+                distance: "100px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".contact", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "50px",
+                reset: true,
+            });
+
+            //loadingアニメーション
+
+            //ローディング画面を取得
+            const loading = document.querySelector(".loading");
+            const heart = document.querySelector(".heart");
+
+            heart.style.display = "none";
+
+            //ページの読み込み完了時に処理を実行
+            window.addEventListener("load", () => {
+                setTimeout(() => {
+                    heart.style.display = "";
+                }, 2000);
+
+                //4秒後にローディング画面を非表示にする
+                setTimeout(() => {
+                    loading.classList.add("loaded");
+                }, 3000);
+                setTimeout(() => {
+                    heart.classList.add("loaded");
+                }, 4000);
             });
         </script>
     </body>

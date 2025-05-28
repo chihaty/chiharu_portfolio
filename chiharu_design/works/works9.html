@@ -94,7 +94,7 @@
                 </nav>
             </div>
         </header>
-        <div class="flag__position works__title__wrap">
+        <div class="works__title__wrap">
             <h2>Works</h2>
             <p>おしごと</p>
         </div>
@@ -111,71 +111,77 @@
         <!-- 詳細紹介 -->
 
         <section class="works__detail">
-            <picture>
-                <source
-                    srcset="../images/back-semicircle.png"
-                    media="(min-width:767px)" />
-                <source
-                    srcset="../images/back-semicircle-sp@2x.png"
-                    media="(min-width:451px)" />
-                <source
-                    srcset="../images/back-semicircle-sp2@2x.png"
-                    media="(max-width:450px)" />
-                <img
-                    src="../images/back-semicircle.png"
-                    alt="半円のもこもこ"
-                    class="semicircle"
-            /></picture>
+            <div class="works__detail__inner">
+                <picture>
+                    <source
+                        srcset="../images/back-semicircle.png"
+                        media="(min-width:767px)" />
+                    <source
+                        srcset="../images/back-semicircle-sp@2x.png"
+                        media="(min-width:451px)" />
+                    <source
+                        srcset="../images/back-semicircle-sp2@2x.png"
+                        media="(max-width:450px)" />
+                    <img
+                        src="../images/back-semicircle.png"
+                        alt="半円のもこもこ"
+                        class="semicircle"
+                /></picture>
 
-            <div class="pink-box">
-                <h3>共生マガジン INCL様</h3>
-                <img src="../images/line.png" />
+                <div class="pink-box">
+                    <h3>共生マガジン INCL様</h3>
+                    <img src="../images/line.png" />
 
-                <div class="detail">
-                    <dl>
-                        <dt>カテゴリー</dt>
-                        <dd>チラシ</dd>
-                        <dt>担当範囲</dt>
-                        <dd>デザイン</dd>
-                        <dt>制作期間</dt>
-                        <dd>1日</dd>
+                    <div class="detail">
+                        <dl>
+                            <dt>カテゴリー</dt>
+                            <dd>チラシ</dd>
+                            <dt>担当範囲</dt>
+                            <dd>デザイン</dd>
+                            <dt>制作期間</dt>
+                            <dd>1日</dd>
 
-                        <dt>ツール</dt>
-                        <dd>Canva</dd>
-                    </dl>
-                    <div class="detail_right_box">
-                        <p>クライアントのニーズ</p>
-                        <ul>
-                            <li>
-                                障がい児を育てる家族の本音に迫るピアサポートマガジン
-                            </li>
-                            <li>
-                                シックなイメージに仕上がったロゴに合わせ、落ち着いたトーンにしたい
-                            </li>
-                            <li>当事者家族のイメージが湧くようなチラシ</li>
-                        </ul>
+                            <dt>ツール</dt>
+                            <dd>Canva</dd>
+                        </dl>
+                        <div class="detail_right_box">
+                            <p>クライアントのニーズ</p>
+                            <ul>
+                                <li>
+                                    障がい児を育てる家族の本音に迫るピアサポートマガジン
+                                </li>
+                                <li>
+                                    シックなイメージに仕上がったロゴに合わせ、落ち着いたトーンにしたい
+                                </li>
+                                <li>当事者家族のイメージが湧くようなチラシ</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <img src="../images/line.png" />
-                <div class="point">
-                    <div class="star-set">
-                        <img src="../images/star-set.png" alt="星のイラスト" />
+                    <img src="../images/line.png" />
+                    <div class="point">
+                        <div class="star-set">
+                            <img
+                                src="../images/star-set.png"
+                                alt="星のイラスト"
+                            />
+                        </div>
+                        <h3>制作のポイント</h3>
                     </div>
-                    <h3>制作のポイント</h3>
+                    <ul class="point-list">
+                        <li>
+                            当事者の写真を大きく掲載することで、親子の関係性が垣間見れるような訴求力のあるチラシとした
+                        </li>
+
+                        <li>
+                            リード文をシンプルに掲載し、読み物として惹きつける
+                        </li>
+
+                        <li>
+                            QRコードを掲載することで、チラシからすぐに該当Webサイトにたどり着くことができる
+                        </li>
+                    </ul>
                 </div>
-                <ul class="point-list">
-                    <li>
-                        当事者の写真を大きく掲載することで、親子の関係性が垣間見れるような訴求力のあるチラシとした
-                    </li>
-
-                    <li>リード文をシンプルに掲載し、読み物として惹きつける</li>
-
-                    <li>
-                        QRコードを掲載することで、チラシからすぐに該当Webサイトにたどり着くことができる
-                    </li>
-                </ul>
             </div>
-
             <!-- 一覧に戻るボタン -->
             <div class="btn btn_back btn_backToWokrs">
                 <a href="../works.html">一覧に戻る</a>
@@ -210,6 +216,8 @@
         </p>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!-- scroll -->
+        <script src="https://unpkg.com/scrollreveal"></script>
         <!-- ハンバーガーメニュー -->
         <script>
             $(function () {
@@ -217,6 +225,29 @@
                     $(".hamburger").toggleClass("open");
                     $(".header__nav-sp").fadeToggle();
                 });
+            });
+            //scroll
+            ScrollReveal().reveal(".works__title__wrap", {
+                duration: 1600,
+                origin: "top",
+                distance: "50px",
+                scale: 0.5,
+                reset: true,
+            });
+
+            ScrollReveal().reveal(".sample-img", {
+                duration: 1600,
+                delay: 1000,
+                origin: "bottom",
+                distance: "50px",
+                reset: false,
+            });
+            ScrollReveal().reveal(".works__detail__inner", {
+                duration: 1600,
+                delay: 200,
+                origin: "bottom",
+                distance: "50px",
+                reset: false,
             });
         </script>
     </body>
