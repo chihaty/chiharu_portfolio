@@ -85,41 +85,6 @@ body {
     }
 }
 
-.fadeout {
-    animation: fadeOut 1s;
-    animation-fill-mode: both;
-}
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-#container {
-    opacity: 0; /*はじめは透過0に*/
-}
-
-/*bodyにpageOnクラスがついたら出現*/
-body.pageOn #container {
-    animation-name: PageAnimeOn;
-    animation-duration: 1s;
-    animation-delay: 0.8s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-@keyframes PageAnimeOn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 /* topページ */
 
 /* hedaer */
@@ -136,14 +101,18 @@ body.pageOn #container {
     box-sizing: border-box;
     z-index: 10;
 }
+
+.header__nav__plus {
+    padding-right: 3.4%;
+}
 .header__nav ul {
-    display: flex;
-    gap: 64px;
     background: #fff;
     border-top: 1px solid #231816;
     border-bottom: 1px solid #231816;
     border-left: 1px solid #231816;
     border-radius: 30px 0px 0px 30px;
+    display: flex;
+    gap: 64px;
     height: 60px;
     align-items: center;
     padding-left: 80px;
@@ -178,7 +147,7 @@ body.pageOn #container {
     display: block;
     text-align: center;
     position: relative;
-    margin-right: 64px;
+    margin-right: calc(64px + 3.4%);
     width: 140px;
     height: 38px;
     color: #fff !important;
@@ -221,6 +190,9 @@ body.pageOn #container {
 
 /* ブレイクポイント */
 @media screen and (max-width: 1000px) {
+    .header__nav__plus {
+        padding: 0;
+    }
     .header__nav li {
         font-size: 20px;
     }
@@ -229,7 +201,7 @@ body.pageOn #container {
         padding-left: 40px;
     }
     .contact__nav {
-        margin-right: 32px;
+        margin-right: 24px;
     }
 }
 
@@ -295,7 +267,8 @@ body.pageOn #container {
     .hamburger-green span::after {
         bottom: -13px;
     }
-    .header__nav {
+    .header__nav,
+    .header__nav__plus {
         display: none;
     }
 
@@ -900,7 +873,7 @@ main {
     width: 27.9%;
     position: absolute;
     right: 4.58%;
-    bottom: 0px;
+    bottom: -2px;
 }
 .footer__coppy {
     background: #ff6d99;
@@ -914,6 +887,12 @@ main {
 }
 
 /* topへ戻る */
+.toTop-index {
+    position: fixed;
+    bottom: 50px;
+    right: calc(50px + 3.4%);
+    width: 100px;
+}
 .toTop {
     position: fixed;
     bottom: 50px;
@@ -1304,66 +1283,84 @@ main {
         left: 9.3%;
         top: 80px;
     }
+
+    .car-sp.fixed {
+        position: fixed;
+        z-index: +1;
+    }
+
     .boon1 {
         width: 11%;
         left: 3%;
         top: 200px;
+        z-index: +2;
     }
     .boon2 {
         width: 11%;
         left: 15%;
         top: 250px;
+        z-index: +2;
     }
     .road-star-pink {
         width: 8%;
         top: 27%;
         left: 18%;
+        z-index: +2;
     }
     .road-star-green {
         width: 5%;
         top: 24%;
         left: 20%;
+        z-index: +2;
     }
 
     .firework_pink_59 {
         width: 12%;
         left: 3%;
         top: 30%;
+        z-index: +2;
     }
     .firework_mini {
         width: 3%;
         left: 20%;
         top: 35%;
+        z-index: +2;
     }
 
     .warning {
         width: 20%;
         top: 45%;
         left: 5%;
+        z-index: +2;
     }
     .firework_pink_72 {
         width: 10%;
         top: 55%;
         left: 2%;
+        z-index: +2;
     }
     .firework_purple {
         width: 10%;
         top: 58%;
         left: 18%;
+        z-index: +2;
     }
     .fireworks {
         width: 12%;
         left: 2%;
         top: 65%;
+        z-index: +2;
     }
     .signboard {
         width: 10%;
         left: 13%;
         bottom: 15%;
+        z-index: +2;
     }
     .goal {
         width: 20%;
         bottom: 60px;
+        z-index: +2;
     }
 }
 
@@ -1591,7 +1588,7 @@ main {
 }
 .works__items {
     display: flex;
-    justify-content: space-between;
+    gap: 5%;
     flex-wrap: wrap;
     padding: 0 20px;
 }
@@ -2219,10 +2216,10 @@ main {
     }
     .skills__inner {
         display: block;
-        max-width: 767px;
+        padding: 0px;
     }
     .skills__inner__wrap {
-        width: 84.6%;
+        width: 82%;
         margin: 0 auto 40px;
     }
     .skills_tool {
@@ -2269,7 +2266,8 @@ main {
         width: 38%;
         right: 2%;
     }
-    .toTop {
+    .toTop,
+    .toTop-index {
         position: fixed;
         bottom: 20px;
         right: 15px;
@@ -2537,6 +2535,15 @@ main {
     }
 }
 
+/* about me 風船の位置 */
+@media screen and (max-width: 600px) {
+    .balloon-2set {
+        width: 13%;
+        left: 15%;
+        bottom: -4%;
+    }
+}
+
 /* 雲の位置 */
 @media screen and (max-width: 500px) {
     .cloud {
@@ -2546,6 +2553,19 @@ main {
 @media screen and (max-width: 400px) {
     .cloud {
         top: -35%;
+    }
+    .wheel {
+        right: 0;
+    }
+    .fotter__inner {
+        overflow-x: hidden;
+    }
+}
+
+/* index contact btn 大きさ */
+@media screen and (max-width: 380px) {
+    .btn-contact a {
+        width: 240px;
     }
 }
 

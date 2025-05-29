@@ -6,7 +6,7 @@
         <title>About Me | Chiharu design</title>
         <meta name="author" content="Chiharu design" />
         <meta
-            name="discription"
+            name="description"
             content="Have fun!心おどるデザインを。見る人の心のギアがちょっと上がる、そんなデザインを届けたい。Chiharu desinのご紹介"
         />
         <!-- リセットcss -->
@@ -161,7 +161,11 @@
                     />
                     <img src="./images/start.png" alt="start" class="start" />
                 </picture>
-                <img src="./images/car@2x.png" alt="かっこいい車" class="car" />
+                <img
+                    src="./images/car@2x.png"
+                    alt="かっこいい車"
+                    class="car shake shake-constant car-sp"
+                />
                 <img
                     src="./images/boon@2x.png"
                     alt="BOON"
@@ -328,7 +332,11 @@
                         </ul>
                     </nav>
                 </div>
-                <img src="./images/wheel.png" alt="観覧車" class="wheel" />
+                <img
+                    src="./images/wheel_anime.png"
+                    alt="観覧車"
+                    class="wheel"
+                />
             </div>
             <div class="footer__coppy">
                 <p>&copy;Chiharu design All rights reserved.</p>
@@ -343,77 +351,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <!-- scroll -->
         <script src="https://unpkg.com/scrollreveal"></script>
-        <!-- ハンバーガーメニュー -->
-        <script>
-            $(function () {
-                $(".hamburger").click(function () {
-                    $(".hamburger").toggleClass("open");
-                    $(".header__nav-sp").fadeToggle();
-                });
-            });
-
-            //スクロール
-            ScrollReveal().reveal(".about-me_title", {
-                duration: 1600,
-                origin: "bottom",
-                distance: "50px",
-                scale: 0.5,
-                reset: true,
-            });
-            ScrollReveal().reveal(".cloud-left", {
-                duration: 1600,
-                delay: 400,
-                origin: "left",
-                distance: "300px",
-                reset: true,
-            });
-
-            ScrollReveal().reveal(".cloud-right", {
-                duration: 1600,
-                delay: 400,
-                origin: "right",
-                distance: "300px",
-                reset: true,
-            });
-
-            ScrollReveal().reveal(".introduction", {
-                duration: 1600,
-                delay: 900,
-                origin: "bottom",
-                distance: "300px",
-                reset: false,
-            });
-
-            ScrollReveal().reveal(".speechBubble", {
-                duration: 1600,
-                delay: 200,
-                origin: "right",
-                distance: "300px",
-                reset: false,
-            });
-
-            ScrollReveal().reveal(".bear", {
-                duration: 1600,
-                delay: 500,
-                origin: "right",
-                distance: "300px",
-                reset: false,
-                mobile: true,
-                afterReveal: function (el) {
-                    el.classList.add("walking");
-                },
-            });
-            ScrollReveal().reveal(".panda", {
-                duration: 1600,
-                delay: 500,
-                origin: "right",
-                distance: "300px",
-                reset: false,
-                mobile: true,
-                afterReveal: function (el) {
-                    el.classList.add("walking2");
-                },
-            });
-        </script>
+        <!-- JS読み込み -->
+        <script src="./js/about.js"></script>
     </body>
 </html>
