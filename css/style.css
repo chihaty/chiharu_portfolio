@@ -472,6 +472,7 @@ main {
 .lead-sentence {
     width: 45%;
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
@@ -519,7 +520,7 @@ main {
 .about-me-position {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 calc(20px + 3.4%);
     position: relative;
 }
 .about-me__inner {
@@ -711,6 +712,11 @@ main {
     position: relative;
 }
 
+.prev-arrow:hover,
+.next-arrow:hover {
+    background: #93dfff;
+}
+
 .prev-arrow {
     transform: rotate(180deg);
     margin-right: 80px;
@@ -730,6 +736,7 @@ main {
     margin: auto;
     transform: rotate(45deg);
 }
+
 /* もっと見るボタン２ */
 .btn_more2 a {
     width: 176px;
@@ -800,7 +807,7 @@ main {
 
 /* contact */
 .contact {
-    padding: 0 20px;
+    padding: 0 calc(20px + 3.4%);
 }
 .contact-box {
     max-width: 1000px;
@@ -2596,8 +2603,8 @@ main {
     }
 }
 
-/* works孫ページw430以下 */
-@media screen and (max-width: 430px) {
+/* works孫ページw460以下 */
+@media screen and (max-width: 460px) {
     .detail {
         margin-top: 16px;
     }
