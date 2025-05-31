@@ -786,6 +786,7 @@ main {
     width: 43.1%;
     box-sizing: border-box;
 }
+
 .skills_img {
     background: #fff;
     border: 1px solid #231816;
@@ -797,11 +798,22 @@ main {
     line-height: 1.75;
 }
 
+.skills__category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ff6d99;
+    padding-bottom: 8px;
+    margin: 16px 0;
+}
+.skills__category h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ff6d99;
+}
 .skills_tool {
     display: block;
     width: 36%;
-    margin-top: 8px;
-    margin-bottom: 16px;
     margin-left: auto;
 }
 
