@@ -807,9 +807,11 @@ main {
     margin: 16px 0;
 }
 .skills__category h3 {
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 400;
     color: #ff6d99;
+    font-family: ab-kirigirisu, sans-serif;
+    font-style: normal;
 }
 .skills_tool {
     display: block;
@@ -2243,6 +2245,10 @@ main {
     }
     .skills_tool {
         width: 27%;
+    }
+
+    .skills__text span {
+        display: inline-block;
     }
 
     /* contact(index) */
