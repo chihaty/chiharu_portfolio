@@ -2588,7 +2588,7 @@ main {
 }
 
 /* index contact btn 大きさ */
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
     .btn-contact a {
         width: 240px;
     }
